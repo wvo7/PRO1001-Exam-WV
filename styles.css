@@ -1,19 +1,75 @@
+/* Fonts & colours */
+
+:root {
+    --font-frank-ruhl: 'Frank Ruhl Libre', serif;
+    --font-arimo: 'Arimo', sans-serif;
+
+    --color-text-interface: #0B0A08;
+    --color-primary-bg: #F7F2DE;
+    --color-secondary-bg-text: white;
+
+    --color-red: #DC4131;
+    --color-blue: #E1EAF0;
+    --color-green: #098F51;
+}
+
+/* Global & mobile-first styles */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    font-family: var(--font-arimo), sans-serif;
     line-height: 1.6;
-    background-color: azure;
-    color: black;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-interface);
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, figure, hr {
-    margin: 0;
-    padding: 0;
+.body-text {
+    font-family: var(--font-arimo);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-text-interface);
+} 
+
+.large-body-text {
+    font-family: var(--font-arimo);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-text-interface);
+}
+
+.logo-text {
+    font-family: var(--font-frank-ruhl);
+    font-weight: 300;
+    font-size: 75px;
+    color: var(--color-text-interface);
+}
+
+.header-text {
+    font-family: var(--font-arimo);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--color-text-interface);
+    text-transform: uppercase;
+}
+
+.sub-header-text {
+    font-family: var(--font-arimo);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-text-interface);
+    text-transform: uppercase;
+}
+
+.accent-text {
+    font-family: var(--font-frank-ruhl);
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--color-text-interface);
 }
 
 img {
@@ -34,4 +90,35 @@ a:hover {
 :focus {
     outline: 2px solid blue;
     outline-offset: 2px;
+}
+
+/* Desktop size */
+
+@media (min-width: 768px) {
+
+    .body-text {
+        font-size: 16px;
+    }
+
+    .large-body-text {
+        font-size: 20px;
+    }
+
+    .logo-text {
+        font-size: 200px;
+    }
+
+    .header-text {
+        font-size: 36px;
+    }
+
+    .sub-header-text {
+        font-size: 20px;
+    }
+
+    .accent-text {
+        font-size: 16px;
+    }
+
+
 }
