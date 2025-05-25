@@ -86,6 +86,7 @@ img {
 
 a {
     text-decoration: none;
+    color: var(--color-text-interface);
 }
 
 a:hover {
@@ -93,8 +94,13 @@ a:hover {
 }
 
 :focus {
-    outline: 2px solid;
+    outline: 2px solid var(--color-red);
     outline-offset: 2px;
+}
+
+.off-screen-nav-list li a:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: 2px solid var(--color-red);
 }
 
 ul {
