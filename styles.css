@@ -239,10 +239,103 @@ nav {
     margin-right: 0;
 }
 
-/* MAIN will come here */
+/* MAIN */
+
+/* Top section */
+
+.hero-section {
+    min-height: 80vh;
+    background-image: url('Exam Project/Images/Landing Page/markus-spiske-WcLzVLbUP5g-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--color-secondary-bg-text);
+    position: relative;
+}
+
+.hero-title {
+    font-family: var(--font-frank-ruhl);
+    font-weight: 300;
+    font-size: 75px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-arimo);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 240px;
+    background-color: var(--color-secondary-bg-text);
+    margin: 10px 0;
+}
+
+/* Section */
+
+button {
+    background-color: var(--color-red);
+    color: var(--color-secondary-bg-text);
+    border: none;
+}
+
+button:hover {
+    background-color: #AE2E21;
+}
 
 
+/* Popular produce section */
 
+.popular-produce {
+    background-color: var(--color-secondary-bg-text);
+}
+
+.popular-produce-img {
+    height: 320px;
+    width: 250px
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-red);
+}
+
+.footer-horizontal-line {
+    height: 1px;
+    width: 360px;
+    background-color: var(--color-secondary-bg-text);
+}
+
+.footer-title {
+    font-family: var(--font-frank-ruhl);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--color-secondary-bg-text);
+    text-transform: uppercase;
+}
+
+.footer-sub-header {
+    font-family: var(--font-arimo);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-secondary-bg-text);
+    text-transform: uppercase;
+}
+
+.footer-accent {
+    font-family: var(--font-frank-ruhl);
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-secondary-bg-text);
+}
 
 /* Desktop size */
 
@@ -282,4 +375,15 @@ nav {
         width: 45px;
     }
     
+    .hero-title {
+        font-size: 200px;
+    }
+
+    .hero-subtitle {
+        font-size: 36px;
+    }
+
+    .vertical-line {
+        height: 208px;
+    }
 }
