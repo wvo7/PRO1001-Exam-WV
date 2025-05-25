@@ -45,8 +45,9 @@ body {
 .logo-text {
     font-family: var(--font-frank-ruhl);
     font-weight: 300;
-    font-size: 75px;
+    font-size: 24px;
     color: var(--color-text-interface);
+    text-transform: uppercase;
 }
 
 .header-text {
@@ -79,7 +80,6 @@ img {
 }
 
 a {
-    color: aqua;
     text-decoration: none;
 }
 
@@ -88,9 +88,118 @@ a:hover {
 }
 
 :focus {
-    outline: 2px solid blue;
+    outline: 2px solid;
     outline-offset: 2px;
 }
+
+/* CONTENT */
+
+/* Header */
+
+.main-header {
+    background-color: var(--color-primary-bg);
+    border-bottom: 1px solid black;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    padding: 0 20px;
+}
+
+/* Hamburger menu */
+
+.off-screen-menu {
+    background-color: var(--color-green);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    left: -450px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-right: auto;
+    margin-left: 0;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-text-interface);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(2) {
+    top: 75%
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Cart icon thing */
+
+.cart-icon {
+    background-color: var(--color-green);
+    color: var(--color-text-interface);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* MAIN will come here */
+
+
+
 
 /* Desktop size */
 
@@ -105,7 +214,7 @@ a:hover {
     }
 
     .logo-text {
-        font-size: 200px;
+        font-size: 20px;
     }
 
     .header-text {
