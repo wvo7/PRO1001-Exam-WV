@@ -286,17 +286,28 @@ nav {
     margin: 10px 0;
 }
 
-/* Content section */
+/* Shop & Ask section */
+
+.shop-and-ask-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
 
 .content-section {
-    padding: 98px 0;
     margin: 0 16px;
     text-align: center;
+    width: 100%;
+    max-width: 448px;
+    box-sizing: border-box;
 }
 
 .image-container {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 360px;
     height: 250px;
     overflow: hidden;
     border-radius: 25px;
@@ -310,6 +321,8 @@ nav {
 
 .content-section h1.header-text {
     margin-bottom: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .content-section p.accent-text:nth-of-type(1) {
@@ -346,6 +359,14 @@ nav {
 }
 
 /* How it works section */
+
+.steps-wrapper .step h2,
+.steps-wrapper .step p {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
 
 .how-it-works-section {
     background-color: var(--color-primary-bg);
@@ -569,9 +590,11 @@ footer {
     background-color: var(--color-green);
 }
 
-/* Desktop size */
+/* DESKTOP STYLING */
 
 @media (min-width: 768px) {
+
+    /* Text */
 
     .body-text {
         font-size: 16px;
@@ -597,6 +620,8 @@ footer {
         font-size: 16px;
     }
 
+    /* Header */
+
     .ham-menu {
         height: 25px;
         width: 20px;
@@ -606,7 +631,9 @@ footer {
         height: 35px;
         width: 45px;
     }
-    
+
+    /* Hero section */
+
     .hero-title {
         font-size: 200px;
     }
@@ -617,5 +644,145 @@ footer {
 
     .vertical-line {
         height: 208px;
+    }
+
+    /* Shop n' Ask section*/
+
+    .shop-and-ask-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 98px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0 auto;
+        max-width: 1280px;
+        overflow: hidden;
+    }
+
+    .content-section {
+        flex: 0 0 448px;
+        margin: 0;
+        padding: 98px 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .image-container {
+        height: 327px;
+        width: 448px;
+        margin: 0 auto;
+    }
+
+    .hero-divider-line {
+        display: none;
+    }
+
+    .content-section.shop-section {
+        position: relative;
+    }
+
+    .content-section.shop-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -49px;
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-text-interface);
+        z-index: 1;
+    }
+
+    .content-section.ask-section {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    /* How it works section */
+
+    .how-it-works-bg-container {
+        background-color: var(--color-primary-bg);
+        border-top: 1px solid var(--color-text-interface);
+        border-bottom: 1px solid var(--color-text-interface);
+        min-height: 785px;
+        box-sizing: border-box;
+        padding: 98px 0;
+    }
+
+    .how-it-works-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        height: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 98px;
+        gap: 99px;
+        position: relative;
+    }
+
+    .how-it-works-section .how-it-works-title {
+        text-align: center;
+        flex: 1;
+        max-width: calc((100% - 99px) / 3);
+        min-width: 250px;
+        margin: 0 auto;
+    }
+
+    .how-it-works-vertical-divider {
+        width: 1px;
+        background-color: var(--color-text-interface);
+        height: 100%;
+        flex-shrink: 0;
+    }
+
+    .steps-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: calc(((100% - 99px) / 3) * 2);
+        min-width: 448px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    .steps-wrapper .step {
+        padding: 0;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .steps-wrapper .step .sub-header-text {
+        text-align: left;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .steps-wrapper .step p.body-text {
+        margin-top: 0;
+        margin-bottom: 45px;
+    }
+
+    .steps-wrapper .step p.body-text:last-of-type {
+        margin-bottom: 45px;
+    }
+
+    .steps-wrapper .how-it-works-divider {
+        display: block;
+        background-color: var(--color-text-interface);
+        height: 1px;
+        width: 100%;
+        margin: 45px 0;
+    }
+
+    .how-it-works-section > .how-it-works-divider { 
+        display: none;
+    }
+
+    .steps-wrapper .how-it-works-divider:last-of-type {
+        display: none;
     }
 }
