@@ -24,7 +24,7 @@ body {
     padding: 0;
     font-family: var(--font-arimo), sans-serif;
     line-height: 1.6;
-    background-color: var(--color-primary-bg);
+    background-color: white;
     color: var(--color-text-interface);
 }
 
@@ -245,7 +245,7 @@ nav {
 /* Top section – Hero */
 
 .hero-section {
-    min-height: 80vh;
+    min-height: 90vh;
     background-image: url('Exam Project/Images/Landing Page/markus-spiske-WcLzVLbUP5g-unsplash.jpg');
     background-size: cover;
     background-position: center;
@@ -289,7 +289,6 @@ nav {
 /* Content section */
 
 .content-section {
-    background-color: var(--color-primary-bg);
     padding: 98px 0;
     margin: 0 16px;
     text-align: center;
@@ -309,8 +308,8 @@ nav {
     object-fit: cover;
 }
 
-.content-section h2.sub-header-text {
-    margin-bottom: 8 px;
+.content-section h1.header-text {
+    margin-bottom: 8px;
 }
 
 .content-section p.accent-text:nth-of-type(1) {
@@ -340,30 +339,48 @@ nav {
     background-color: #AE2E21;
 }
 
+.hero-divider-line {
+    height: 1px;
+    background-color: var(--color-text-interface);
+    margin: 45px 0 60px;
+}
+
 /* How it works section */
 
 .how-it-works-section {
+    background-color: var(--color-primary-bg);
     text-align: center;
-    padding: 98px 16px;
     margin-bottom: 0;
     text-align: left;
 }
 
 .how-it-works-section .header-text {
+    margin-top: 90px;
     margin-bottom: 45px;
+    padding: 0 16px;
 }
 
 .step {
     padding: 24px 45px;
-    margin-bottom: 45px;
 }
 
 .step:last-of-type {
     margin-bottom: 0;
 }
 
-.step p.body-text {
-    margin-bottom: 0;
+.step-link {
+    color: gray;
+    text-decoration: underline;
+}
+
+.step-link:hover {
+    color: var(--color-text-interface);
+}
+
+.how-it-works-divider {
+    height: 1px;
+    background-color: var(--color-text-interface);
+    margin: 45px 0;
 }
 
 /* Popular produce section */
@@ -388,18 +405,24 @@ nav {
     gap: 30px;
     padding-left: 45px;
     padding-right: 45px;
+
+    .produce-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
 }
 
 .produce-card {
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
+    overflow: hidden;
     width: 250px;
+    padding-bottom: 20px;
     text-align: left;
     scroll-snap-align: start;
-    padding-bottom: 16px;
 }
 
 .popular-produce-img {
@@ -407,33 +430,78 @@ nav {
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
-    margin-bottom: 18px;
+}
+
+.produce-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 10px;
+    align-items: end;
+    padding: 10px 0;
 }
 
 .produce-name {
     font-size: 20px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
+    grid-column: 1 / 2;
+    white-space: nowrap;
 }
 
 .produce-price {
     font-size: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 0px;
+    grid-column: 2 / 3;
+    text-align: right;
+    white-space: nowrap;
 }
 
 .produce-weight {
     font-size: 20px;
     margin-bottom: 0;
+    color: gray;
+    grid-column: 1 / 2;
+    white-space: nowrap;
+}
+
+.add-to-cart-button {
+    background-color: black;
+    color: white;
+    font-family: var(--font-arimo);
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: 265px;
+    right: 16px;
+    transform: translateX(0%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.add-to-cart-button:hover {
+    background-color: var(--color-green);
 }
 
 /* FOOTER */
 
 footer {
     background-color: var(--color-red);
+    padding: 0 45px;
+}
+
+.footer-content-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .footer-horizontal-line {
     height: 1px;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     background-color: var(--color-secondary-bg-text);
 }
 
@@ -441,6 +509,7 @@ footer {
     font-family: var(--font-frank-ruhl);
     font-size: 48px;
     font-weight: 300;
+    padding-top: 45px;
     color: var(--color-secondary-bg-text);
     text-transform: uppercase;
 }
@@ -449,6 +518,7 @@ footer {
     font-family: var(--font-arimo);
     font-size: 24px;
     font-weight: 400;
+    margin: 45px 0;
     color: var(--color-secondary-bg-text);
     text-transform: uppercase;
 }
@@ -457,7 +527,46 @@ footer {
     font-family: var(--font-frank-ruhl);
     font-size: 16px;
     font-weight: 300;
+    margin-bottom: 45px;
     color: var(--color-secondary-bg-text);
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sign-up input {
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    margin: 6px 0 6px 0;
+    padding-left: 15px;
+    font-family: var(--font-arimo);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sign-up button {
+    background-color: var(--color-blue);
+    color: var(--color-text-interface);
+    border: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    margin-top: 18px;
+    margin-bottom: 45px;
+    font-family: var(--font-arimo);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up button:hover {
+    background-color: var(--color-green);
 }
 
 /* Desktop size */
