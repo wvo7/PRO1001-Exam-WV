@@ -61,6 +61,7 @@ body {
     font-size: 24px;
     color: var(--color-text-interface);
     text-transform: uppercase;
+    text-align: center;
 }
 
 .sub-header-text {
@@ -104,7 +105,7 @@ a:hover {
 }
 
 ul {
-    text-decoration: none;
+    list-style: none;
 }
 
 /* CONTENT */
@@ -241,7 +242,7 @@ nav {
 
 /* MAIN */
 
-/* Top section */
+/* Top section – Hero */
 
 .hero-section {
     min-height: 80vh;
@@ -262,12 +263,20 @@ nav {
     font-family: var(--font-frank-ruhl);
     font-weight: 300;
     font-size: 75px;
+    margin: 0;
 }
 
 .hero-subtitle {
     font-family: var(--font-arimo);
     font-weight: 400;
     font-size: 24px;
+}
+
+.hero-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .vertical-line {
@@ -277,30 +286,144 @@ nav {
     margin: 10px 0;
 }
 
-/* Section */
+/* Content section */
 
-button {
+.content-section {
+    background-color: var(--color-primary-bg);
+    padding: 98px 0;
+    margin: 0 16px;
+    text-align: center;
+}
+
+.image-container {
+    margin: 0 auto;
+    max-width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-section h2.sub-header-text {
+    margin-bottom: 8 px;
+}
+
+.content-section p.accent-text:nth-of-type(1) {
+    margin-bottom: 45px;
+}
+
+.content-section p.accent-text + .primary-button {
+    margin-bottom: 45px;
+}
+
+.primary-button {
     background-color: var(--color-red);
     color: var(--color-secondary-bg-text);
     border: none;
+    width: 320px;
+    height: 45px;
+    border-radius: 8px;
+    padding: 15px 30px;
+    margin: 45px auto;
+    font-family: var(--font-arimo);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.primary-button:hover {
     background-color: #AE2E21;
 }
 
+/* How it works section */
+
+.how-it-works-section {
+    text-align: center;
+    padding: 98px 16px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.how-it-works-section .header-text {
+    margin-bottom: 45px;
+}
+
+.step {
+    padding: 24px 45px;
+    margin-bottom: 45px;
+}
+
+.step:last-of-type {
+    margin-bottom: 0;
+}
+
+.step p.body-text {
+    margin-bottom: 0;
+}
 
 /* Popular produce section */
 
-.popular-produce {
+.popular-produce-section {
     background-color: var(--color-secondary-bg-text);
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-bottom: 0;
+}
+
+.popular-produce-section .header-text {
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.produce-carousel {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    gap: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.produce-card {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 250px;
+    text-align: left;
+    scroll-snap-align: start;
+    padding-bottom: 16px;
 }
 
 .popular-produce-img {
     height: 320px;
-    width: 250px
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 18px;
 }
 
+.produce-name {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.produce-price {
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.produce-weight {
+    font-size: 20px;
+    margin-bottom: 0;
+}
 
 /* FOOTER */
 
