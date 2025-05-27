@@ -13,31 +13,33 @@
 
     <body>
         <header class="main-header">
-            <div id="offScreenMenu" class="off-screen-menu">
+            <div id="offScreenMenu" class="off-screen-menu" role="dialog" aria-modal="true" aria-labelledby="offScreenMenuTitle">
+                <h2 id="offScreenMenuTitle" class="visually-hidden">Main Navigation Menu</h2>
                 <nav aria-label="Main Navigation">
                     <ul class="off-screen-nav-list">
-                        <li><a href="products.html">PRODUCTS</a></li>
-                        <li><a href="chatbot.html">CHAT</a></li>
-                        <li><a href="#">CHECKOUT</a></li>
+                        <li><a href="products.html" aria-label="Fram Product Page">PRODUCTS</a></li>
+                        <li><a href="chatbot.html" aria-label="Fram Chatbot Page">CHAT</a></li>
+                        <li><a href="#" aria-label="Fram Checkout Page">CHECKOUT</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="header-content"> 
-                <div class="ham-menu" aria-label="Open main menu" aria-controls="offScreenMenu" aria-expanded="false">
+                <button class="ham-menu" aria-label="Open main menu" aria-controls="offScreenMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
                 <div class="logo-text"><a href=index.html>Fram</a></div>
-                <div class="cart-icon" role="img" aria-label="Shopping Cart item counter"> 0</div>
+                <div class="cart-icon" role="status" aria-label="Shopping Cart item counter"> 0</div>
             </div>
             
         </header>
 
-        <main>
-            <section class="hero-section">
-                <h1 class="hero-title">FRAM</h1>
+        <main id="MainContent">
+            <section class="hero-section" aria-labelledby="HeroTitle">
+                <img class="hero-bg-image-preload" src="/Exam Project/Images/Landing Page/hero.bg.jpg" alt="Hero background image for the page" aria-hidden="true">
+                <h1 class="hero-title" id="HeroTitle">FRAM</h1>
                 <div class="hero-divider">
                     <div class="vertical-line"></div> 
                     <p class="hero-subtitle">Home delivery from<br>your local farms</p>
@@ -49,7 +51,7 @@
                     <h1 class="header-text">Shop our seasonal selection</h1>
                     <p class="accent-text">Updated every week</p>
                     <div class="image-container">
-                        <img src="Exam Project/Images/Landing Page/nina-luong-dp06f70Eyvc-unsplash.jpg">
+                        <img src="/Exam Project/Images/Landing Page/nina-luong-dp06f70Eyvc-unsplash.jpg" alt="Fresh, colourful produce in a woven basket">
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
                     <button class="primary-button">Browse our selection</button>
@@ -60,23 +62,24 @@
                     <h1 class="header-text">Ask us about anything</h1>
                     <p class="accent-text">All your questions answered</p>
                     <div class="image-container">
-                        <img src="Exam Project/Images/Landing Page/rebecca-ritchie-NWrp3FK68yE-unsplash.jpg">
+                        <img src="/Exam Project/Images/Landing Page/rebecca-ritchie-NWrp3FK68yE-unsplash.jpg" alt="Farmer in a field">
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
                     <button class="primary-button">Go to chat</button>
                 </div>
             </div>
 
-            <section class="how-it-works-bg-container">
+            <section class="how-it-works-bg-container" aria-labelledby="HowItWorksTitle">
                 <div class="how-it-works-section">
-                    <h1 class="header-text how-it-works-title">This is how it<br> works</h1>
-                    <div class="how-it-works-vertical-divider"></div>
+                    <h1 class="header-text how-it-works-title" id="howItWorksTitle">This is how it works</h1>
 
                     <div class="steps-wrapper">
                         <div class="step">
                             <h2 class="sub-header-text">Order groceries</h2>
-                            <p class="body-text">Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.</p>
-                            <p class="body-text"><a href="products.html" class="step-link">See our stock here</a></p>
+                            <div>
+                                <p class="body-text">Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.</p>
+                                <a href="products.html" class="step-link">See our stock here</a>
+                            </div>
                         </div>
                         <div class="how-it-works-divider"></div>
 
@@ -101,38 +104,38 @@
                 </div>
             </section>
 
-            <section class="popular-produce-section">
-                <h1 class="header-text">Popular produce</h1>
+            <section class="popular-produce-section" aria-labelledby="PopularProduceTitle">
+                <h1 class="header-text" id="PopularProduceTitle">Popular produce</h1>
 
-                <div class="produce-carousel">
-                    <div class="produce-card">
-                        <img class="popular-produce-img" src="Exam Project/Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="oats">
+                <div class="produce-carousel" role="region" aria-label="Popular produce items">
+                    <div class="produce-card" role="group" aria-labelledby="OatsName">
+                        <img class="popular-produce-img" src="/Exam Project/Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Close up of oats">
                         <div class="produce-info">
-                            <p class="produce-name">Oats</p>
+                            <p class="produce-name" id="OatsName">Oats</p>
                             <p class="produce-price">48 kr/kg</p>
                             <p class="produce-weight">1kg</p>
                         </div>
-                        <button class="add-to-cart-button">Add to basket <span class="arrow-icon">↑</span></button>
+                        <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                     </div>
 
-                    <div class="produce-card">
-                        <img class="popular-produce-img" src="Exam Project/Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="red-onions">
+                    <div class="produce-card" role="group" aria-labelledby="RedOnionsName">
+                        <img class="popular-produce-img" src="/Exam Project/Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="A pile of unpeeled red-onions">
                         <div class="produce-info">
-                            <p class="produce-name">Red Onions</p>
+                            <p class="produce-name" id="RedOnionsName">Red Onions</p>
                             <p class="produce-price">48 kr/kg</p>
                             <p class="produce-weight">0.5kg</p>
                         </div>
-                        <button class="add-to-cart-button">Add to basket <span class="arrow-icon">↑</span></button>
+                        <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                     </div>
 
-                    <div class="produce-card">
-                        <img class="popular-produce-img" src="Exam Project/Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="garlic">
+                    <div class="produce-card" role="group" aria-labelledby="GarlicName">
+                        <img class="popular-produce-img" src="/Exam Project/Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="Close up of some garlic">
                         <div class="produce-info">
-                            <p class="produce-name">Garlic</p>
+                            <p class="produce-name" id="GarlicName">Garlic</p>
                             <p class="produce-price">48 kr/kg</p>
                             <p class="produce-weight">0.2kg</p>
                         </div>
-                        <button class="add-to-cart-button">Add to basket <span class="arrow-icon">↑</span></button>
+                        <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                     </div>
                 </div>
             </section>
@@ -144,9 +147,11 @@
                 <div class="footer-horizontal-line"></div>
                 <h2 class="footer-sub-header">Stay updated</h2>
                 <p class="footer-accent">Sign up for our newsletter to be the first<br>to know about new produce or other<br> exciting news!</p>
-                <form class="sign-up">
-                    <input type="text" placeholder="First name">
-                    <input type="email" placeholder="E-mail adress">
+                <form class="sign-up" aria-label="Newsletter signup form">
+                    <label for="firstName" class="visually-hidden">First name</label>
+                    <input type="text" id="firstName" placeholder="First name" autocomplete="given-name">
+                    <label for="emailAddress" class="visually-hidden">E-mail address</label>
+                    <input type="email" id="emailAddress" placeholder="E-mail adress" autocomplete="email">
                     <button type="submit">Send</button>
                 </form>
             </div>
