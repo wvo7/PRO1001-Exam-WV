@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fram - Landing Page</title>
+        <link rel="stylesheet" href="Exam Project/styles.css">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="product-page">
+        <header class="main-header">
+            <div id="offScreenMenu" class="off-screen-menu" role="dialog" aria-modal="true" aria-labelledby="offScreenMenuTitle">
+                <h2 id="offScreenMenuTitle" class="visually-hidden">Main Navigation Menu</h2>
+                <nav aria-label="Main Navigation">
+                    <ul class="off-screen-nav-list">
+                        <li><a href="products.html" aria-label="Fram Product Page">PRODUCTS</a></li>
+                        <li><a href="chatbot.html" aria-label="Fram Chatbot Page">CHAT</a></li>
+                        <li><a href="#" aria-label="Fram Checkout Page">CHECKOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-content"> 
+                <button class="ham-menu" aria-label="Open main menu" aria-controls="offScreenMenu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo-text"><a href=index.html>Fram</a></div>
+                <div class="cart-icon" role="status" aria-label="Shopping Cart item counter"> 0</div>
+            </div>
+            
+        </header>
+
+        <main>
+            <h1 class="product-page-title">Produce</h1>
+            <p class="product-text">Explore our selection of seasonal produce, sourced directly from local farms to ensure peak freshness and quality. Every item is chosen with care, supporting sustainable practices and bringing the best of the harvest to your table</p>
+
+            <section>
+                <div class="produce-card" role="group" aria-labelledby="OatsName">
+                    <img class="popular-produce-img" src="/Exam Project/Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Close up of oats">
+                    <div class="produce-info">
+                        <p class="produce-name" id="OatsName">Oats</p>
+                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-weight">1kg</p>
+                    </div>
+                    <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
+                </div>
+
+                <div class="produce-card" role="group" aria-labelledby="RedOnionsName">
+                    <img class="popular-produce-img" src="/Exam Project/Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="A pile of unpeeled red-onions">
+                    <div class="produce-info">
+                        <p class="produce-name" id="RedOnionsName">Red Onions</p>
+                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-weight">0.5kg</p>
+                    </div>
+                    <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
+                </div>
+
+                <div class="produce-card" role="group" aria-labelledby="GarlicName">
+                    <img class="popular-produce-img" src="/Exam Project/Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="Close up of some garlic">
+                    <div class="produce-info">
+                        <p class="produce-name" id="GarlicName">Garlic</p>
+                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-weight">0.2kg</p>
+                    </div>
+                    <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
+                </div>
+
+                <div class="produce-card" role="group" aria-labelledby="PotatoesName">
+                    <img class="popular-produce-img" src="Exam Project/Images/Product Page/rodrigo-dos-reis-h3AkzboxK4Q-unsplash.jpg" alt="Close up of raw potatoes">
+                    <div class="produce-info">
+                        <p class="produce-name" id="PotateosName">Potatoes</p>
+                        <p class="produce-price">32 kr/kg</p>
+                        <p class="produce-weight">1kg</p>
+                    </div>
+                    <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
+                </div>
+
+                <div class="produce-card" role="group" aria-labelledby="CarrotscName">
+                    <img class="popular-produce-img" src="Exam Project/Images/Product Page/goh-rhy-yan-wUBhu3GXIg0-unsplash.jpg" alt="Close up raw carrots">
+                    <div class="produce-info">
+                        <p class="produce-name" id="CarrotsName">Garlic</p>
+                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-weight">Gård</p>
+                    </div>
+                    <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
+                </div>
+            </div>
+            </section>
+
+            <section class="partner-farms">
+                <h1 class="partner-farms-title">See our partnering farms</h1>
+
+                <div class="map-container">
+                    <div class="map"></div>
+                </div>
+            </section>
+
+
+        </main>
+    
+        <footer>
+            <!--
+            <div class="footer-content-wrapper">
+                <h1 class="footer-title">Fram</h1>
+                <div class="footer-horizontal-line"></div>
+                <h2 class="footer-sub-header">Stay updated</h2>
+                <p class="footer-accent">Sign up for our newsletter to be the first<br>to know about new produce or other<br> exciting news!</p>
+                <form class="sign-up" aria-label="Newsletter signup form">
+                    <label for="firstName" class="visually-hidden">First name</label>
+                    <input type="text" id="firstName" placeholder="First name" autocomplete="given-name">
+                    <label for="emailAddress" class="visually-hidden">E-mail address</label>
+                    <input type="email" id="emailAddress" placeholder="E-mail adress" autocomplete="email">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            -->
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -12,3 +12,6 @@ hamMenu.addEventListener('click', () =>{
     const isExpanded = hamMenu.getAttribute('aria-expanded') === 'true';
     hamMenu.setAttribute('aria-expanded', !isExpanded);
 })
+
+/* Product page – Map */
+

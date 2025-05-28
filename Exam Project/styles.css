@@ -1,4 +1,10 @@
-/* Fonts & colours */
+/*  
+
+   ================
+    1. BASE STYLES 
+   ================
+
+*/
 
 :root {
     --font-frank-ruhl: 'Frank Ruhl Libre', serif;
@@ -12,8 +18,6 @@
     --color-blue: #E1EAF0;
     --color-green: #008F51;
 }
-
-/* Global & mobile-first styles */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -119,9 +123,17 @@ ul {
     list-style: none;
 }
 
-/* CONTENT */
 
-/* Header */
+
+/*  
+
+   ===================================
+    2. SHARED CONTENT AMONGST ALL PAGES
+   ===================================
+
+*/
+
+/* { Header } */
 
 .main-header {
     background-color: var(--color-primary-bg);
@@ -140,7 +152,7 @@ ul {
     height: 68px;
 }
 
-/* Hamburger menu */
+/* { Hamburger menu } */
 
 .off-screen-menu {
     background-color: var(--color-green);
@@ -236,7 +248,7 @@ nav {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* Cart icon thing */
+/* { Cart icon thing } */
 
 .cart-icon {
     background-color: var(--color-green);
@@ -251,9 +263,17 @@ nav {
     margin-right: 0;
 }
 
-/* MAIN */
 
-/* Top section – Hero */
+
+/* 
+
+   ==================
+    3. LOADING PAGE
+   ================== 
+
+*/
+
+/* { Top section – Hero } */
 
 .hero-bg-image-preload {
     display: none; 
@@ -306,7 +326,7 @@ nav {
     margin: 10px 0;
 }
 
-/* Shop & Ask section */
+/* { Shop & Ask section } */
 
 .shop-and-ask-container {
     display: flex;
@@ -378,7 +398,7 @@ nav {
     margin: 45px 16px 60px;
 }
 
-/* How it works section */
+/* { How it works section } */
 
 .steps-wrapper .step h2,
 .steps-wrapper .step p {
@@ -429,7 +449,7 @@ nav {
     margin: 45px 0;
 }
 
-/* Popular produce section */
+/* { Popular produce section } */
 
 .popular-produce-section {
     background-color: var(--color-secondary-bg-text);
@@ -483,7 +503,7 @@ nav {
     grid-template-columns: 1fr auto;
     gap: 0 10px;
     align-items: end;
-    padding: 10px 0;
+    padding: 0;
 }
 
 .produce-name {
@@ -495,7 +515,7 @@ nav {
 
 .produce-price {
     font-size: 20px;
-    margin-bottom: 0px;
+    margin: 0;
     grid-column: 2 / 3;
     text-align: right;
     white-space: nowrap;
@@ -503,7 +523,7 @@ nav {
 
 .produce-weight {
     font-size: 20px;
-    margin-bottom: 0;
+    margin-top: 10px;
     color: gray;
     grid-column: 1 / 2;
     white-space: nowrap;
@@ -531,7 +551,7 @@ nav {
     background-color: var(--color-green);
 }
 
-/* FOOTER */
+/* { FOOTER } */
 
 footer {
     background-color: var(--color-red);
@@ -615,11 +635,119 @@ footer {
     background-color: var(--color-green);
 }
 
-/* DESKTOP STYLING */
+
+
+/*
+
+   =================
+    4. PRODUCT PAGE
+   =================
+
+*/
+
+.product-page {
+    background-color: var(--color-primary-bg);
+}
+
+.product-page-title {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 90px 25px 24px;
+}
+
+.product-text {
+    padding: 0 50px 40px 25px;
+}
+
+/* { Produce section } */
+
+.product-page .produce-card {
+    width: 100%;
+    padding: 30px 25px 0; 
+}
+
+.product-page .popular-produce-img {
+    height: 280px;
+}
+
+.product-page .produce-name {
+    font-size: 24px;
+}
+
+.product-page .produce-price {
+    font-size: 24px;
+}
+
+.product-page .produce-weight {
+    margin: 0;
+}
+
+.product-page .add-to-cart-button {
+    top: 255px;
+    right: 35px;
+}
+
+/* { Partnering farms section } */
+
+.partner-farms-title {
+    text-align: center;
+    padding: 45px;
+    border-top: 1px solid var(--color-text-interface);
+    border-bottom: 1px solid var(--color-text-interface);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* Map */
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 25px;
+    border-radius: 16px;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+   ==============================
+    6. DESKTOP RESPONSIVE DESIGN 
+   ==============================
+   
+
+*/
 
 @media (min-width: 768px) {
 
-    /* Text */
+    /* { Text } */
 
     .body-text {
         font-size: 16px;
@@ -645,7 +773,7 @@ footer {
         font-size: 16px;
     }
 
-    /* Header */
+    /* { Header } */
 
     .ham-menu {
         height: 25px;
@@ -657,7 +785,7 @@ footer {
         width: 45px;
     }
 
-    /* Menu */
+    /* { Menu } */
 
     .off-screen-nav-list li {
         font-size: 36px; 
@@ -668,6 +796,10 @@ footer {
         margin-top: 425px;
         padding-bottom: 20px; 
     }
+
+    /*
+        LANDING PAGE
+    */
 
     /* Hero section */
 
@@ -913,4 +1045,9 @@ footer {
     .sign-up {
         max-width: 450px;
     }
+
+
+     /*
+        PRODUCTS PAGE
+    */
 }
