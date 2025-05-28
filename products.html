@@ -33,19 +33,18 @@
                 <div class="logo-text"><a href=index.html>Fram</a></div>
                 <div class="cart-icon" role="status" aria-label="Shopping Cart item counter"> 0</div>
             </div>
-            
         </header>
 
         <main>
             <h1 class="product-page-title">Produce</h1>
             <p class="product-text">Explore our selection of seasonal produce, sourced directly from local farms to ensure peak freshness and quality. Every item is chosen with care, supporting sustainable practices and bringing the best of the harvest to your table</p>
 
-            <section>
+            <section class="produce-grid">
                 <div class="produce-card" role="group" aria-labelledby="OatsName">
                     <img class="popular-produce-img" src="/Exam Project/Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Close up of oats">
                     <div class="produce-info">
                         <p class="produce-name" id="OatsName">Oats</p>
-                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-price">16 kr/kg</p>
                         <p class="produce-weight">1kg</p>
                     </div>
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
@@ -55,7 +54,7 @@
                     <img class="popular-produce-img" src="/Exam Project/Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="A pile of unpeeled red-onions">
                     <div class="produce-info">
                         <p class="produce-name" id="RedOnionsName">Red Onions</p>
-                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-price">45 kr/kg</p>
                         <p class="produce-weight">0.5kg</p>
                     </div>
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
@@ -65,7 +64,7 @@
                     <img class="popular-produce-img" src="/Exam Project/Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="Close up of some garlic">
                     <div class="produce-info">
                         <p class="produce-name" id="GarlicName">Garlic</p>
-                        <p class="produce-price">48 kr/kg</p>
+                        <p class="produce-price">38 kr/kg</p>
                         <p class="produce-weight">0.2kg</p>
                     </div>
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
@@ -90,17 +89,19 @@
                     </div>
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                 </div>
-            </div>
             </section>
 
             <section class="partner-farms">
-                <h1 class="partner-farms-title">See our partnering farms</h1>
+                <div class="partner-farm-info">
+                    <h1 class="partner-farms-title">See our partnering farms</h1>
+                </div>
 
-                <div class="map-container">
-                    <div class="map"></div>
+                <div id="map-container">
+                    <div id="loading-state">Loading map...</div>
+                    <div id="error-state" style="display: none;"></div>
+                    <div id="map"></div>
                 </div>
             </section>
-
 
         </main>
     
@@ -121,6 +122,6 @@
             </div>
             -->
         </footer>
-        <script src="script.js"></script>
+        <script src="Exam Project/script.js"></script>
     </body>
 </html>
