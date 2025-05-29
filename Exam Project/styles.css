@@ -690,6 +690,12 @@ footer {
 
 /* { Partnering farms section } */
 
+.partner-farms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .partner-farms-title {
     text-align: center;
     padding: 45px;
@@ -697,6 +703,7 @@ footer {
     border-bottom: 1px solid var(--color-text-interface);
     text-transform: uppercase;
     font-weight: 400;
+    width: fit-content;
 }
 
 /* Map */
@@ -1018,7 +1025,7 @@ footer {
     /* Footer */
 
     footer {
-        padding: 0 55px;
+        padding: 0 0 0 55px;
     }
 
     .footer-content-wrapper {
@@ -1062,8 +1069,86 @@ footer {
     }
 
 
-     /*
+    /*
         PRODUCTS PAGE
     */
 
+    .product-page {
+        padding: 0;
+    }
+
+    .product-page-title {
+        font-size: 36px;
+        margin: 0;
+        padding-bottom: 0;
+        padding-left: 45px;
+    }
+
+    .product-text {
+        padding: 0 0 45px 45px;
+        max-width: 600px;
+    }
+
+    /* { Produce section } */
+
+    .produce-grid {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 30px;
+    }
+
+    .produce-grid .produce-card {
+        padding: 0 15px;
+    }
+
+    .product-page .popular-produce-img {
+        width: 454px;
+        height: 432px;
+    }
+
+    .product-page .add-to-cart-button {
+        top: 375px;
+    }
+
+    .product-page .produce-weight {
+        padding-bottom: 50px;
+    }
+
+    /* { Partner-farms section } */
+
+    .partner-farms {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .partner-farms-title {
+        display: flex;
+        flex-basis: 300px;
+        flex-shrink: 0;
+        border: none;
+        font-size: 27px;
+        align-items: center;
+        padding: 0;
+    }
+
+    .partner-farms-header {
+        border-top: 1px solid var(--color-text-interface);
+        width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #map-container {
+        border-top: 1px solid var(--color-text-interface);
+        border-left: 1px solid var(--color-text-interface);
+        height: 478px;
+        padding: 45px 90px;
+    }
+
+    .product-page .footer-title {
+        margin-top: 0;
+    }
 }

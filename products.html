@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fram - Landing Page</title>
+        <title>Fram - Products Page</title>
         <link rel="stylesheet" href="Exam Project/styles.css">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,7 +83,7 @@
                 <div class="produce-card" role="group" aria-labelledby="CarrotscName">
                     <img class="popular-produce-img" src="Exam Project/Images/Product Page/goh-rhy-yan-wUBhu3GXIg0-unsplash.jpg" alt="Close up raw carrots">
                     <div class="produce-info">
-                        <p class="produce-name" id="CarrotsName">Garlic</p>
+                        <p class="produce-name" id="CarrotsName">Carrots</p>
                         <p class="produce-price">48 kr/kg</p>
                         <p class="produce-weight">Gård</p>
                     </div>
@@ -91,12 +91,12 @@
                 </div>
             </section>
 
-            <section class="partner-farms">
-                <div class="partner-farm-info">
+            <section class="partner-farms" aria-label="Information about our partering farm and its map-location">
+                <div class="partner-farms-header">
                     <h1 class="partner-farms-title">See our partnering farms</h1>
                 </div>
 
-                <div id="map-container">
+                <div id="map-container" aria-label="Interactive map desplaying location of partnering farm">
                     <div id="loading-state">Loading map...</div>
                     <div id="error-state" style="display: none;"></div>
                     <div id="map"></div>
@@ -106,7 +106,6 @@
         </main>
     
         <footer>
-            <!--
             <div class="footer-content-wrapper">
                 <h1 class="footer-title">Fram</h1>
                 <div class="footer-horizontal-line"></div>
@@ -120,7 +119,6 @@
                     <button type="submit">Send</button>
                 </form>
             </div>
-            -->
         </footer>
         <script src="Exam Project/script.js"></script>
     </body>
