@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fram - Landing Page</title>
+        <title>Fram - Chatbot Page</title>
         <link rel="stylesheet" href="styles.css">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +16,9 @@
             <div id="offScreenMenu" class="off-screen-menu">
                 <nav aria-label="Main Navigation">
                     <ul class="off-screen-nav-list">
-                        <li><a href="products.html">PRODUCTS</a></li>
-                        <li><a href="chatbot.html">CHAT</a></li>
-                        <li><a href="#">CHECKOUT</a></li>
+                        <li><a href="products.html" aria-label="Fram Product Page">PRODUCTS</a></li>
+                        <li><a href="chatbot.html" aria-label="Fram Chatbot Page">CHAT</a></li>
+                        <li><a href="#" aria-label="Fram Checkout Page">CHECKOUT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,8 +35,16 @@
             
         </header>
 
-        <main>
-
+        <main class="chatbot-page" aria-label="Main chatbot interface">
+            <img class="hero-bg-image-preload" src="/Exam Project/Images/Landing Page/hero.bg.jpg" alt="Hero background image for the page" aria-hidden="true">
+            <div class="chatbot-container" role="region" aria-label="Chatbot chat area">
+                <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Conversation history"></div>
+                <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+                <div class="chat-input">
+                    <textarea id="messageInput" aria-label="Type your message"></textarea>
+                    <button id="sendMessage" aria-label="Send message"><span class="arrow-icon" aria-hidden="true">↑</span></button>
+                </div>
+            </div>
         </main>
     
         <footer>

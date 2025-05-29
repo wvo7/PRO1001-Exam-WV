@@ -109,11 +109,6 @@ a:hover {
     text-decoration: underline;
 }
 
-:focus {
-    outline: 2px solid var(--color-red);
-    outline-offset: 2px;
-}
-
 .off-screen-nav-list li a:focus {
     background-color: rgba(255, 255, 255, 0.1);
     outline: 2px solid var(--color-red);
@@ -142,6 +137,7 @@ ul {
     position: sticky;
     z-index: 100;
     padding: 0 20px;
+    height: 68px;
 }
 
 .header-content {
@@ -297,6 +293,7 @@ nav {
     padding: 20px;
     color: var(--color-secondary-bg-text);
     position: relative;
+    height: calc(100vh - 68px);
 }
 
 .hero-title {
@@ -749,12 +746,141 @@ footer {
 
 
 
+/* 
 
+   =================
+    5. CHATBOT PAGE 
+   =================
 
+*/
 
+.chatbot-page {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: 0;
+}
 
+.chatbot-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
 
+.chat-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
 
+#messageInput {
+    width: 288px;
+    height: 44px;
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 16px;
+    padding: 16px 25px 20px;
+    
+    #messageInput::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.message {
+    max-width: 80%;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    align-self: flex-end;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 16px;
+    background-color: var(--color-blue);
+    margin-right: 15px;
+    max-width: 255px;
+}
+
+.bot-message-wrapper {
+    display: flex;
+    align-items: left;
+}
+
+.bot-logo-text {
+    font-family: var(--font-frank-ruhl);
+    font-size: 16px;
+    font-weight: 300;
+    margin: 15px;
+    display: flex;
+    align-self: flex-start;
+}
+
+.bot-message-bubble {
+    background-color: var(--color-primary-bg);
+    padding: 10px;
+    border-radius: 16px;
+    max-width: 255px;
+}
+
+.chatbot-page textarea {
+    flex-grow: 1;
+    resize: none;
+    max-height: 80px;
+    overflow-y: auto;
+    font-size: 16px;
+}
+
+.chatbot-page button {
+    border: none;
+    background-color: var(--color-red);
+    color: white;
+    width: 60px;
+    height: 44px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.chatbot-page button:hover {
+    background-color: #d02411;
+}
+
+.status-message {
+    width: 90%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.error-message {
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+    border-radius: 4px;
+    padding: 5px 0;
+}
+
+.loading-message {
+    font-size: 20px;
+    padding: 5px 0;
+}
 
 
 
@@ -764,7 +890,6 @@ footer {
     6. DESKTOP RESPONSIVE DESIGN 
    ==============================
    
-
 */
 
 @media (min-width: 768px) {
@@ -796,6 +921,14 @@ footer {
     }
 
     /* { Header } */
+
+    .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        height: 68px;
+    }
+
 
     .ham-menu {
         height: 25px;
@@ -1150,5 +1283,35 @@ footer {
 
     .product-page .footer-title {
         margin-top: 0;
+    }
+
+
+    /*
+        CHATBOT PAGE
+    */
+
+    .chatbot-page {
+        background-image: url('/Exam Project/Images/Landing Page/hero.bg.jpg');
+        background-size: cover;
+        background-position: center;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 68px);
+    }
+
+    .chatbot-container {
+        background-color: var(--color-secondary-bg-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        width: 508px;
+        height: 716px;
+        flex-grow: 0;
+    }
+
+    #messageInput {
+        width: 395px;
     }
 }
