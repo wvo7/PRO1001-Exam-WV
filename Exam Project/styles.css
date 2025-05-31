@@ -259,6 +259,64 @@ nav {
     margin-right: 0;
 }
 
+/* { Modified styles for accessibility } */
+
+:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+    border-radius: 4px;
+    transition: outline 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.ham-menu:focus-visible span {
+    background-color: var(--color-red);
+}
+
+a:focus-visible,
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="button"]:focus-visible {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+#messageInput:focus-visible,
+.sign-up input:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.primary-button:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+    background-color: #AE2E21;
+}
+
+.add-to-cart-button:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+    background-color: var(--color-green);
+}
+
+.step-link:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+    color: var(--color-text-interface);
+}
+
+#map:focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 4px;
+    border-radius: 16px;
+}
+
 
 
 /* 
@@ -282,7 +340,7 @@ nav {
 
 .hero-section {
     min-height: 90vh;
-    background-image: url('/Exam Project/Images/Landing Page/hero.bg.jpg');
+    background-image: url('./assets/Landing Page/Hero-bg-img.jpg'); 
     background-size: cover; 
     background-position: center;
     display: flex;
@@ -1291,7 +1349,7 @@ footer {
     */
 
     .chatbot-page {
-        background-image: url('/Exam Project/Images/Landing Page/hero.bg.jpg');
+        background-image: url('./assets/Landing Page/Hero-bg-img.jpg');
         background-size: cover;
         background-position: center;
         flex-direction: row;
