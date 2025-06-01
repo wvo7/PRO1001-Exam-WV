@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fram - Chatbot Page</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta name="description" content="You will get all your questions answered by our Fram chatbot!">
+        <link rel="preload" href="./assets/Landing Page/Hero-bg-img.avif" as="image" type="image/avif" fetchpriority="high">
+
+        <link rel="stylesheet" href="styles.min.css">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +39,6 @@
         </header>
 
         <main id="MainContent" class="chatbot-page" aria-label="Main chatbot interface">
-            <img class="hero-bg-image-preload" src="./assets/Landing Page/Hero-bg-img.jpg" alt="Hero background image for the page" aria-hidden="true">
             <div class="chatbot-container" role="region" aria-label="Chatbot chat area">
                 <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Conversation history"></div>
                 <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
@@ -50,6 +52,6 @@
         <footer>
 
         </footer>
-        <script src="script.js"></script>
+        <script src="script.min.js"></script>
     </body>
 </html>

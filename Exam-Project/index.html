@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fram - Landing Page</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Fram - Products Landing Page</title>
+        <meta name="description" content="Fram delivers fresh, seasonal produce directly from local farms to your home. Explore our selection of organic fruits, vegetables, and more.">
+        <link rel="stylesheet" href="styles.min.css">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
-    </head>
+    </head>    
 
     <body>
         <header class="main-header">
@@ -38,7 +39,6 @@
 
         <main id="MainContent">
             <section class="hero-section" aria-labelledby="HeroTitle">
-                <img class="hero-bg-image-preload" src="./assets/Landing Page/Hero-bg-img.jpg" alt="Hero background image for the page" aria-hidden="true">
                 <h1 class="hero-title" id="HeroTitle">FRAM</h1>
                 <div class="hero-divider">
                     <div class="vertical-line"></div> 
@@ -51,7 +51,11 @@
                     <h1 class="header-text">Shop our seasonal selection</h1>
                     <p class="accent-text">Updated every week</p>
                     <div class="image-container">
-                        <img src="./assets/Landing Page/Shop-section-img.jpg" alt="Fresh, colourful produce in a woven basket">
+                        <picture>
+                            <source srcset="./assets/Landing-Page/shop-section-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/Landing-Page/shop-section-img.webp 1600vw" sizes="100vw" type="image/webp">
+                            <img src="./assets/Landing-Page/Shop-section-img.jpg" alt="Fresh, colourful produce in a woven basket" width="1600" height="1600">
+                        </picture>
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
                     <button class="primary-button">Browse our selection</button>
@@ -62,44 +66,66 @@
                     <h1 class="header-text">Ask us about anything</h1>
                     <p class="accent-text">All your questions answered</p>
                     <div class="image-container">
-                        <img src="./assets/Landing Page/Ask-section-img.jpg" alt="Farmer in a field">
+                        <picture>
+                            <source srcset="./assets/Landing-Page/Ask-section-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/Landing-Page/Ask-section-img.webp 1600vw" sizes="100vw" type="image/webp">
+                            <img src="./assets/Landing-Page/Ask-section-img.jpg" alt="Farmer in a field" width="1600" height="1601">
+                        </picture>
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
                     <button class="primary-button">Go to chat</button>
                 </div>
             </div>
 
-            <section class="how-it-works-bg-container" aria-labelledby="HowItWorksTitle">
-                <div class="how-it-works-section">
-                    <h1 class="header-text how-it-works-title" id="howItWorksTitle">This is how it works</h1>
+            <section class="how-it-works-section" aria-labelledby="HowItWorksTitle">
+                <div class="how-it-works-container">
+                    <div class="steps step-1">
+                        <h1 class="header-text step-main-title" id="howItWorksTitle">This is how it works</h1>
+                    </div>
 
-                    <div class="steps-wrapper">
-                        <div class="step">
-                            <h2 class="sub-header-text">Order groceries</h2>
-                            <div>
+                    <div class="right-column">
+
+                        <div class="steps step-2">
+                            <div class="steps-wrapper step-title-area">
+                                <h2 class="sub-header-text step-title-small">Order groceries</h2>
+                            </div>
+                            <div class="steps-wrapper step-text-area">
                                 <p class="body-text">Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. Browse our seasonal selection, choose your items, and place your order online.</p>
                                 <a href="products.html" class="step-link">See our stock here</a>
                             </div>
                         </div>
-                        <div class="how-it-works-divider"></div>
+                        
 
-                        <div class="step">
-                            <h2 class="sub-header-text">Stock up</h2>
-                            <p class="body-text">Once your order arrives, unpack the produce and store it however it works best for you. Hold onto the containers—they’re yours to keep until your next order.</p>
+                        <div class="steps step-3">
+                            <div class="steps-wrapper step-title-area">
+                                <h2 class="sub-header-text step-title-small">Stock up</h2>
+                            </div>                           
+                            <div class="steps-wrapper step-text-area">
+                                <p class="body-text">Once your order arrives, unpack the produce and store it however it works best for you. Hold onto the containers—they're yours to keep until your next order.</p>
+                            </div>
                         </div>
-                        <div class="how-it-works-divider"></div>
+                        
 
-                        <div class="step">
-                            <h2 class="sub-header-text">Scan & reorder</h2>
-                            <p class="body-text">Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone’s camera. This instantly adds the items back to your cart, making reordering a breeze.</p>
+                        <div class="steps step-4">
+                            <div class="steps-wrapper step-title-area">
+                                <h2 class="sub-header-text step-title-small">Scan & reorder</h2>
+                            </div>
+                            <div class="steps-wrapper step-text-area">
+                                <p class="body-text">Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone's camera. This instantly adds the items back to your cart, making reordering a breeze.</p>
+                            </div>
                         </div>
-                        <div class="how-it-works-divider"></div>
+                        
 
-                        <div class="step">
-                            <h2 class="sub-header-text">Swap & reuse</h2>
-                            <p class="body-text">When we deliver your new order, simply leave your empty containers outside. We’ll pick them up, clean them thoroughly, and reuse them for future deliveries.</p>
+                        <div class="steps step-5">
+                            <div class="steps-wrapper step-title-area">
+                                <h2 class="sub-header-text step-title-small">Swap & reuse</h2>
+                            </div>
+                            <div class="steps-wrapper step-text-area">
+                                <p class="body-text">When we deliver your new order, simply leave your empty containers outside. We'll pick them up, clean them thoroughly, and reuse them for future deliveries.</p>
+                            </div>
                         </div>
-                        <div class="how-it-works-divider"></div>
+                        
+
                     </div>
                 </div>
             </section>
@@ -109,7 +135,11 @@
 
                 <div class="produce-carousel" role="region" aria-label="Popular produce items">
                     <div class="produce-card" role="group" aria-labelledby="OatsName">
-                        <img class="popular-produce-img" src="./assets/Product Page/Oats-img.jpg" alt="Close up of oats">
+                        <picture>
+                            <source srcset="./assets/Product-Page/Oats-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/Product-Page/Oats-img.webp 1600w" sizes="100vw" type="image/webp">
+                            <img class="popular-produce-img" src="./assets/Product-Page/Oats-img.jpg" alt="Close up of oats" loading="lazy" width="1600" height="2400" loading="lazy">
+                        </picture> 
                         <div class="produce-info">
                             <p class="produce-name" id="OatsName">Oats</p>
                             <p class="produce-price">48 kr/kg</p>
@@ -119,7 +149,11 @@
                     </div>
 
                     <div class="produce-card" role="group" aria-labelledby="RedOnionsName">
-                        <img class="popular-produce-img" src="./assets/Product Page/Red-onions-img.jpg" alt="A pile of unpeeled red-onions">
+                        <picture>
+                            <source srcset="./assets/Product-Page/Red-onions-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/Product-Page/Red-onions-img.webo 1600vw" sizes="100vw" type="image/webp">
+                            <img class="popular-produce-img" src="./assets/Product-Page/Red-onions-img.jpg" alt="A pile of unpeeled red-onions" width="1600" height="1200" loading="lazy">
+                        </picture>
                         <div class="produce-info">
                             <p class="produce-name" id="RedOnionsName">Red Onions</p>
                             <p class="produce-price">48 kr/kg</p>
@@ -129,7 +163,11 @@
                     </div>
 
                     <div class="produce-card" role="group" aria-labelledby="GarlicName">
-                        <img class="popular-produce-img" src="./assets/Product Page/Garlic-img.jpg" alt="Close up of some garlic">
+                        <picture>
+                            <source srcset="./assets/Product-Page/Garlic-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/Product-Page/Garlic-img.webp 1600w" sizes="100vw" type="image/webp">
+                            <img class="popular-produce-img" src="./assets/Product-Page/Garlic-img.jpg" alt="Close up of some garlic" width="1600" height="1067" loading="lazy">
+                        </picture>
                         <div class="produce-info">
                             <p class="produce-name" id="GarlicName">Garlic</p>
                             <p class="produce-price">48 kr/kg</p>
@@ -156,6 +194,6 @@
                 </form>
             </div>
         </footer>
-        <script src="script.js"></script>
+        <script src="script.min.js"></script>
     </body>
 </html>
