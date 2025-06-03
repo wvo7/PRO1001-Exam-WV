@@ -140,3 +140,11 @@ During local development, you might observe the following warning in the browser
 #### Uses deprecated APIs - H1UserAgentFontSizeInSelection
 * **Cause:** This warning is an internal deprecation within the Chromium browser engine itself (not related to the code).
 * **Impact:** It does not affect website functionality, performance, or appearance, and is expected to resolve with future browser updates.
+
+#### 'The resource ... was preloaded using link preload but not used within a few seconds from the window's load event.'
+
+* **Cause:** This typically occurs on page reloads or back/forward navigation. It's a timing sensitivity where the preloaded background image is eventually used and displayed, but not quite fast enough for the browser's strict preload timeline, likely due to the styles.css file being render-blocking.
+* **Impact:** The image still loads and displays correctly. This is a minor performance optimisation detail during development and does not indicate a critical issue for the live site. I deem this acceptable for a prototype, but with further development I'd either:
+
+  1. _Inline the CSS rule_ directly into a `<styles>` tag in the `<head>`, which would make the image 'used' immediately, or:
+  2. _Make styles.css non-render-blocking_. Maybe by using `media="print"` and then `onload="this.media='all'"`, combined with `rel="preload"` for the stylesheet itself. It's more complex, though.

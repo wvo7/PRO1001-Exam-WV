@@ -6,7 +6,6 @@
     in all the HTML files.
 */
 
-
 /*
 
    ================
@@ -366,14 +365,14 @@ input[type="button"]:focus-visible {
     text-align: center;
 
     color: var(--color-secondary-bg-text);
-    background-image: url('./assets/Landing-Page/Hero-bg-img.jpg');
+    background-image: url('/Exam-Project/assets/images/Landing-Page/Hero-bg-img.jpg');
     background-position: center;
     background-size: cover;
 }
 
 @supports(background-image: url( 'data: image/avif; base64, AAAAHGZ0eXAgYXZpZjhpZjAgYXZpZiAgYXZpZiBtYXJrZmEzAAAADmljY28dIHRydmMgcmZjIG51bGwxAABsYXZpZmF2eXJmZgAAr3BpdG0AAAAAaWl0cmlwAAAAEGF2aWZpZmEgAAAAAEhXRFJJV1NMQ2FydGZkQ1EAAAAARGl0c3UAAAAAcGlweAAAAHJob28AAAAAMnBpdWluAAAAAPoAAABtaWRhAABtb292AAAACGdtZGF0YWAAAAAybmRhaXAAAAARaGlkYWRtAAAAAAAVcGlsYwAAAAAoYXZpZmF2Y2kAAAAEAAABgAAAAAAABw=="')) {
     .hero-section {
-        background-image: url('./assets/Landing-Page/Hero-bg-img.avif');
+        background-image: url('/Exam-Project/assets/images/Landing-Page/Hero-bg-img.avif');
     }
 }
 
@@ -893,6 +892,8 @@ footer {
 /* Map */
 
 #map-container {
+    position: relative;
+
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -1517,14 +1518,14 @@ footer {
 
         height: calc(100vh - 68px);
 
-        background-image: url('./assets/Landing-Page/Hero-bg-img.jpg');
+        background-image: url('/Exam-Project/assets/images/Landing-Page/Hero-bg-img.jpg');
         background-position: center;
         background-size: cover;
     }
 
     @supports(background-image: url( 'data: image/avif; base64, AAAAHGZ0eXAgYXZpZjhpZjAgYXZpZiAgYXZpZiBtYXJrZmEzAAAADmljY28dIHRydmMgcmZjIG51bGwxAABsYXZpZmF2eXJmZgAAr3BpdG0AAAAAaWl0cmlwAAAAEGF2aWZpZmEgAAAAAEhXRFJJV1NMQ2FydGZkQ1EAAAAARGl0c3UAAAAAcGlweAAAAHJob28AAAAAMnBpdWluAAAAAPoAAABtaWRhAABtb292AAAACGdtZGF0YWAAAAAybmRhaXAAAAARaGlkYWRtAAAAAAAVcGlsYwAAAAAoYXZpZmF2Y2kAAAAEAAABgAAAAAAABw=="')) {
         .chatbot-page {
-            background-image: url('./assets/Landing-Page/Hero-bg-img.avif');
+            background-image: url('/Exam-Project/assets/images/Landing-Page/Hero-bg-img.avif');
         }
     }
 

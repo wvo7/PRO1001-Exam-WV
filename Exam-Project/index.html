@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fram - Products Landing Page</title>
         <meta name="description" content="Fram delivers fresh, seasonal produce directly from local farms to your home. Explore our selection of organic fruits, vegetables, and more.">
-        <link rel="stylesheet" href="styles.min.css">
+        
+        <link rel="preload" href="/Exam-Project/assets/images/Landing-Page/Hero-bg-img.avif" as="image" type="image/avif" fetchpriority="high">
+        <link rel="stylesheet" href="./css/styles.min.css">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,8 +54,8 @@
                     <p class="accent-text">Updated every week</p>
                     <div class="image-container">
                         <picture>
-                            <source srcset="./assets/Landing-Page/shop-section-img.avif 1600w" sizes="100vw" type="image/avif">
-                            <source srcset="./assets/Landing-Page/shop-section-img.webp 1600vw" sizes="100vw" type="image/webp">
+                            <source srcset="./assets/images/Landing-Page/shop-section-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/images//Landing-Page/shop-section-img.webp 1600vw" sizes="100vw" type="image/webp">
                             <img src="./assets/Landing-Page/Shop-section-img.jpg" alt="Fresh, colourful produce in a woven basket" width="1600" height="1600">
                         </picture>
                     </div>
@@ -67,9 +69,9 @@
                     <p class="accent-text">All your questions answered</p>
                     <div class="image-container">
                         <picture>
-                            <source srcset="./assets/Landing-Page/Ask-section-img.avif 1600w" sizes="100vw" type="image/avif">
-                            <source srcset="./assets/Landing-Page/Ask-section-img.webp 1600vw" sizes="100vw" type="image/webp">
-                            <img src="./assets/Landing-Page/Ask-section-img.jpg" alt="Farmer in a field" width="1600" height="1601">
+                            <source srcset="./assets/images//Landing-Page/Ask-section-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/images//Landing-Page/Ask-section-img.webp 1600vw" sizes="100vw" type="image/webp">
+                            <img src="./assets/images//Landing-Page/Ask-section-img.jpg" alt="Farmer in a field" width="1600" height="1601">
                         </picture>
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
@@ -136,9 +138,9 @@
                 <div class="produce-carousel" role="region" aria-label="Popular produce items">
                     <div class="produce-card" role="group" aria-labelledby="OatsName">
                         <picture>
-                            <source srcset="./assets/Product-Page/Oats-img.avif 1600w" sizes="100vw" type="image/avif">
-                            <source srcset="./assets/Product-Page/Oats-img.webp 1600w" sizes="100vw" type="image/webp">
-                            <img class="popular-produce-img" src="./assets/Product-Page/Oats-img.jpg" alt="Close up of oats" loading="lazy" width="1600" height="2400" loading="lazy">
+                            <source srcset="./assets/images//Product-Page/Oats-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/images//Product-Page/Oats-img.webp 1600w" sizes="100vw" type="image/webp">
+                            <img class="popular-produce-img" src="./assets/images//Product-Page/Oats-img.jpg" alt="Close up of oats" loading="lazy" width="1600" height="2400" loading="lazy">
                         </picture> 
                         <div class="produce-info">
                             <p class="produce-name" id="OatsName">Oats</p>
@@ -150,9 +152,9 @@
 
                     <div class="produce-card" role="group" aria-labelledby="RedOnionsName">
                         <picture>
-                            <source srcset="./assets/Product-Page/Red-onions-img.avif 1600w" sizes="100vw" type="image/avif">
-                            <source srcset="./assets/Product-Page/Red-onions-img.webo 1600vw" sizes="100vw" type="image/webp">
-                            <img class="popular-produce-img" src="./assets/Product-Page/Red-onions-img.jpg" alt="A pile of unpeeled red-onions" width="1600" height="1200" loading="lazy">
+                            <source srcset="./assets/images//Product-Page/Red-onions-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/images//Product-Page/Red-onions-img.webo 1600vw" sizes="100vw" type="image/webp">
+                            <img class="popular-produce-img" src="./assets/images//Product-Page/Red-onions-img.jpg" alt="A pile of unpeeled red-onions" width="1600" height="1200" loading="lazy">
                         </picture>
                         <div class="produce-info">
                             <p class="produce-name" id="RedOnionsName">Red Onions</p>
@@ -164,9 +166,9 @@
 
                     <div class="produce-card" role="group" aria-labelledby="GarlicName">
                         <picture>
-                            <source srcset="./assets/Product-Page/Garlic-img.avif 1600w" sizes="100vw" type="image/avif">
-                            <source srcset="./assets/Product-Page/Garlic-img.webp 1600w" sizes="100vw" type="image/webp">
-                            <img class="popular-produce-img" src="./assets/Product-Page/Garlic-img.jpg" alt="Close up of some garlic" width="1600" height="1067" loading="lazy">
+                            <source srcset="./assets/images//Product-Page/Garlic-img.avif 1600w" sizes="100vw" type="image/avif">
+                            <source srcset="./assets/images//Product-Page/Garlic-img.webp 1600w" sizes="100vw" type="image/webp">
+                            <img class="popular-produce-img" src="./assets/images//Product-Page/Garlic-img.jpg" alt="Close up of some garlic" width="1600" height="1067" loading="lazy">
                         </picture>
                         <div class="produce-info">
                             <p class="produce-name" id="GarlicName">Garlic</p>
@@ -194,6 +196,6 @@
                 </form>
             </div>
         </footer>
-        <script src="script.min.js"></script>
+        <script src="./js/script.min.js"></script>
     </body>
 </html>

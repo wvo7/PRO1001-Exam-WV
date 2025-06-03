@@ -149,8 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Open Google Maps with custom style + marker */
         async function initMap() {
             try {
-                /* Hide loading/error indicator with successful loading */
-                loadingStateElement.style.display = 'none'; 
+                /* Clear any previous error messages before initialisation */ 
                 errorStateElement.style.display = 'none'; 
 
                 const { Map } = await google.maps.importLibrary("maps");
@@ -163,6 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 const map = new Map(mapElement, mapOptions);
+
+                /* Hide loading state after the map is successfully created */
+                loadingStateElement.style.display = 'none';
 
                 /* Import AdvancedMarkerElement for better markers */
                 const { AdvancedMarkerElement } = await google.maps.importLibrary("marker"); 
@@ -178,6 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 /* Catch & show specific error */
                 console.error("Error during map initialization:", error);
+                /* Makes sure loading state is hidden even if map initialisation fails */
+                loadingStateElement.style.display = 'none';
                 errorStateElement.textContent = `Error initializing map: ${error.message}`;
                 errorStateElement.style.display = 'block';
                 /* Hide map if errors occurs */
@@ -346,6 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     /* Provide specific error message */
                     if (response.status === 401) {
                         errorMessage = 'Authentication failed. Please check your API key.';
+                    } else if (response.status === 429) {
+                        errorMessage = 'Too many requests. Please try again in a moment.';
                     } else if (response.status >= 500) {
                         errorMessage = 'Server error. Please try again later.';
                     } else if (errorData && errorData.error && errorData.error.message) {
