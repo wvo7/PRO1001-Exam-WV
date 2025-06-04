@@ -6,16 +6,22 @@
         <title>Fram - Chatbot Page</title>
         <meta name="description" content="You will get all your questions answered by our Fram chatbot!">
         
+        <!-- Preload the hero background image for faster loading -->
         <link rel="preload" href="/Exam-Project/assets/images/Landing-Page/Hero-bg-img.avif" as="image" type="image/avif" fetchpriority="high">
+        
+        <!-- Link to minified stylesheet -->
         <link rel="stylesheet" href="./css/styles.min.css">
     
+        <!-- Preconnects to Google Fonts for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Imports custom fonts from Google -->
         <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header class="main-header">
+            <!-- Off-screen navigation menu -->
             <div id="offScreenMenu" class="off-screen-menu">
                 <nav aria-label="Main Navigation">
                     <ul class="off-screen-nav-list">
@@ -26,32 +32,40 @@
                 </nav>
             </div>
 
-            <div class="header-content"> 
+            <div class="header-content">
+                <!--Hamburger menu icon -->
                 <div class="ham-menu" role="button" aria-label="Open main menu" aria-controls="offScreenMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
                 <div class="logo-text"><a href=index.html>Fram</a></div>
+                <!-- Shopping cart icon with item counter -->
                 <div class="cart-icon" role="img" aria-label="Shopping Cart item counter"> 0</div>
             </div>
             
         </header>
 
+        <!-- Main chatbot interface -->
         <main id="MainContent" class="chatbot-page" aria-label="Main chatbot interface">
+            
+            <!-- Container for the entire chatbot interface -->
             <div class="chatbot-container" role="region" aria-label="Chatbot chat area">
+
+                <!-- Displays the conversation history -->
                 <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Conversation history"></div>
+                
+                <!-- Displays status messages -->
                 <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+                
+                <!-- Input area for user messages & send button -->
                 <div class="chat-input">
                     <textarea id="messageInput" aria-label="Type your message"></textarea>
                     <button id="sendMessage" aria-label="Send message"><span class="arrow-icon" aria-hidden="true">↑</span></button>
                 </div>
             </div>
         </main>
-    
-        <footer>
-
-        </footer>
+        <!-- Links to minified JavaScript file -->
         <script src="./js/script.min.js"></script>
     </body>
 </html>

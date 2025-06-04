@@ -102,8 +102,142 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* 
 
+       ====================
+        2. NEWSLETTER FORM
+       ====================
+
+    */
+
+    /* Only run code if the newsletter form is on the page */
+    if (document.querySelector('.sign-up')) {
+        const newsletterForm = document.querySelector('.sign-up');
+        const firstNameInput = document.getElementById('firstName');
+        const emailAddressInput = document.getElementById('emailAddress');
+        const sendButton = newsletterForm.querySelector('button[type="submit"]');
+
+        /* Display error messages dynamically */
+        const displayError = (element, message) => {
+            /* Make an error message div if not already existing */
+           let errorElement = element.nextElementSibling;
+            if (!errorElement || !errorElement.classList.contains('newsletter-error-message')) {
+                errorElement = document.createElement('div');
+                errorElement.classList.add('newsletter-error-message');
+                element.parentNode.insertBefore(errorElement, element.nextSibling);
+            }
+            errorElement.textContent = message;
+            /* Indicate invalid input for accessibility */
+            element.setAttribute('aria-invalid', 'true');
+            element.classList.add('input-error');
+        };
+
+        /* Clear error messages */
+        const clearError = (element) => {
+            const errorElement = element.nextElementSibling;
+            if (errorElement && errorElement.classList.contains('newsletter-error-message')) {
+                errorElement.remove();
+            }
+            element.removeAttribute('aria-invalid');
+            element.classList.remove('input-error');
+        };
+
+        /* Main validation function */
+        const validateForm = () => {
+            let isValid = true;
+
+            if (firstNameInput.value.trim() === '') {
+                displayError(firstNameInput, 'First name is required.');
+                isValid = false;
+            } else {
+                clearError(firstNameInput);
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailAddressInput.value.trim() === '') {
+                displayError(emailAddressInput, 'Email address is required.');
+                isValid = false;
+            } else if (!emailPattern.test(emailAddressInput.value.trim())) {
+                displayError(emailAddressInput, 'Please enter a valid email address.');
+                isValid = false;
+            } else {
+                clearError(emailAddressInput);
+            }
+
+            return isValid;
+        };
+
+        /* Event listener for form submission */
+        newsletterForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            if (validateForm()) {
+                sendButton.disabled = true;
+                firstNameInput.disabled = true;
+                emailAddressInput.disabled = true;
+                sendButton.textContent = 'Sending...';
+
+                /* Simulated successful submission */
+                console.log('Form is valid and ready for submission!');
+                console.log('First Name:', firstNameInput.value.trim());
+                console.log('Email Address:', emailAddressInput.value.trim());
+
+                try {
+                    /* Simulated API call - 2 sec delay */
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+
+                    /* Success feedback */
+                    alert('Thank you for signing up for our newsletter!');
+                    newsletterForm.reset();
+
+                /* Error feedback */    
+                } catch (error) {
+                    console.error('Submission failed:', error);
+                    alert('There was an error signing up. Please try again.');
+                } finally {
+                    sendButton.disabled = false;
+                    firstNameInput.disabled = false;
+                    emailAddressInput.disabled = false;
+                    sendButton.textContent = 'Send';
+                }
+            } else {
+                alert('Please correct the errors in the form.');
+            }
+        });
+
+        /* Real-time validation */
+        firstNameInput.addEventListener('input', () => {
+            if (firstNameInput.value.trim() !== '') {
+                clearError(firstNameInput);
+            }
+        });
+    
+        emailAddressInput.addEventListener('input', () => {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailAddressInput.value.trim() !== '' && emailPattern.test(emailAddressInput.value.trim())) {
+                clearError(emailAddressInput);
+            }  
+        });
+
+        firstNameInput.addEventListener('blur', () => {
+            if (firstNameInput.value.trim() === '') {
+                displayError(firstNameInput, 'First name is required.');
+            }
+        });
+
+        emailAddressInput.addEventListener('blur', () => {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailAddressInput.value.trim() === '') {
+                displayError(emailAddressInput, 'Email address is required.');
+            } else if (!emailPattern.test(emailAddressInput.value.trim())) {
+                displayError(emailAddressInput, 'Please enter a valid email address.');
+            }
+        });
+    }
+
+
+    /* 
+
        =================
-        2. PRODUCT PAGE
+        3. PRODUCT PAGE
        =================
 
     */
@@ -216,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* 
 
        ============
-        3. CHATBOT
+        4. CHATBOT
        ============
 
     */

@@ -5,15 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fram - Products Page</title>
         <meta name="description" content="Explore Fram's fresh, seasonal produce - sourced directly from local farms.">
+        
+        <!-- Link to minified stylesheet -->
         <link rel="stylesheet" href="./css/styles.min.css">
     
+        <!-- Preconnects to Google Fonts for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Imports custom fonts from Google -->
         <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
 
     <body class="product-page">
         <header class="main-header">
+            <!-- Off-screen navigation menu -->
             <div id="offScreenMenu" class="off-screen-menu" role="dialog" aria-modal="true" aria-labelledby="offScreenMenuTitle">
                 <h2 id="offScreenMenuTitle" class="visually-hidden">Main Navigation Menu</h2>
                 <nav aria-label="Main Navigation">
@@ -25,22 +30,29 @@
                 </nav>
             </div>
 
-            <div class="header-content"> 
+            <div class="header-content">
+                <!--Hamburger menu icon -->
                 <div class="ham-menu" role="button" aria-label="Open main menu" aria-controls="offScreenMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
                 <div class="logo-text"><a href=index.html>Fram</a></div>
+                <!-- Shopping cart icon with item counter -->
                 <div class="cart-icon" role="status" aria-label="Shopping Cart item counter"> 0</div>
             </div>
         </header>
 
+        <!-- Product page content -->
         <main id="MainContent">
+            <!-- Main title for the product page -->
             <h1 class="product-page-title">Produce</h1>
             <p class="product-text">Explore our selection of seasonal produce, sourced directly from local farms to ensure peak freshness and quality. Every item is chosen with care, supporting sustainable practices and bringing the best of the harvest to your table</p>
 
+            <!-- Section displaying the grid of produce cards -->
             <section class="produce-grid">
+
+                <!-- Individual produce card: Oats -->
                 <div class="produce-card" role="group" aria-labelledby="OatsName">
                     <picture>
                         <source srcset="./assets/images/Product-Page/Oats-img.avif 1600w" type="image/avif">
@@ -55,6 +67,7 @@
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                 </div>
 
+                <!-- Individual produce card: Red Onions -->
                 <div class="produce-card" role="group" aria-labelledby="RedOnionsName">
                     <picture>
                         <source srcset="./assets/images/Product-Page/Red-onions-img.avif 1600w" type="image/avif">
@@ -69,6 +82,7 @@
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                 </div>
 
+                <!-- Individual produce card: Garlic -->
                 <div class="produce-card" role="group" aria-labelledby="GarlicName">
                     <picture>
                         <source srcset="./assets/images/Product-Page/Garlic-img.avif 1600w" type="image/avif">
@@ -83,6 +97,7 @@
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                 </div>
 
+                <!-- Individual produce card: Potato -->
                 <div class="produce-card" role="group" aria-labelledby="PotatoesName">
                     <picture>
                         <source srcset="./assets/images/Product-Page/Potatoes-img.avif 1600w" type="image/avif">
@@ -97,6 +112,7 @@
                     <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                 </div>
 
+                <!-- Individual produce card: Carrots -->
                 <div class="produce-card" role="group" aria-labelledby="CarrotsName">
                     <picture>
                         <source srcset="./assets/images/Product-Page/Carrots-img.avif 1600w" type="image/avif">
@@ -112,11 +128,13 @@
                 </div>
             </section>
 
+            <!-- Section displaying information about partner farms & an interactive map -->
             <section class="partner-farms" aria-label="Information about our partering farm and its map-location">
                 <div class="partner-farms-header">
                     <h1 class="partner-farms-title">See our partnering farms</h1>
                 </div>
 
+                <!--  Map container for displaying farm locations -->
                 <div id="map-container" aria-label="Interactive map desplaying location of partnering farm">
                     <div id="loading-state">Loading map...</div>
                     <div id="error-state" style="display: none;"></div>
@@ -132,6 +150,8 @@
                 <div class="footer-horizontal-line"></div>
                 <h2 class="footer-sub-header">Stay updated</h2>
                 <p class="footer-accent">Sign up for our newsletter to be the first<br>to know about new produce or other<br> exciting news!</p>
+                
+                <!-- Newsletter signup form -->
                 <form class="sign-up" aria-label="Newsletter signup form">
                     <label for="firstName" class="visually-hidden">First name</label>
                     <input type="text" id="firstName" placeholder="First name" autocomplete="given-name">
@@ -141,6 +161,7 @@
                 </form>
             </div>
         </footer>
+        <!-- Links to minified JavaScript file -->
         <script src="./js/script.min.js"></script>
     </body>
 </html>

@@ -6,16 +6,22 @@
         <title>Fram - Products Landing Page</title>
         <meta name="description" content="Fram delivers fresh, seasonal produce directly from local farms to your home. Explore our selection of organic fruits, vegetables, and more.">
         
+        <!-- Preload the hero background image for faster loading -->
         <link rel="preload" href="/Exam-Project/assets/images/Landing-Page/Hero-bg-img.avif" as="image" type="image/avif" fetchpriority="high">
+        
+        <!-- Link to minified stylesheet -->
         <link rel="stylesheet" href="./css/styles.min.css">
     
+        <!-- Preconnects to Google Fonts for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Imports custom fonts from Google -->
         <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
     </head>    
 
     <body>
         <header class="main-header">
+            <!-- Off-screen navigation menu -->
             <div id="offScreenMenu" class="off-screen-menu" role="dialog" aria-modal="true" aria-labelledby="offScreenMenuTitle">
                 <h2 id="offScreenMenuTitle" class="visually-hidden">Main Navigation Menu</h2>
                 <nav aria-label="Main Navigation">
@@ -28,18 +34,21 @@
             </div>
 
             <div class="header-content"> 
+                <!--Hamburger menu icon -->
                 <div class="ham-menu" role="button" aria-label="Open main menu" aria-controls="offScreenMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
                 <div class="logo-text"><a href=index.html>Fram</a></div>
+                <!-- Shopping cart icon with item counter -->
                 <div class="cart-icon" role="status" aria-label="Shopping Cart item counter"> 0</div>
             </div>
             
         </header>
 
         <main id="MainContent">
+            <!-- Hero section with main heading & subtitle -->
             <section class="hero-section" aria-labelledby="HeroTitle">
                 <h1 class="hero-title" id="HeroTitle">FRAM</h1>
                 <div class="hero-divider">
@@ -49,6 +58,7 @@
             </section>
 
             <div class="shop-and-ask-container">
+                <!-- Section for checking out product page -->
                 <div class="content-section shop-section">
                     <h1 class="header-text">Shop our seasonal selection</h1>
                     <p class="accent-text">Updated every week</p>
@@ -60,10 +70,11 @@
                         </picture>
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
-                    <button class="primary-button">Browse our selection</button>
+                    <a  href="products.html"><button class="primary-button">Browse our selection</button></a>
                     <div class="hero-divider-line"></div>
                 </div>
 
+                <!-- Section for checking out chatbot -->
                 <div class="content-section ask-section">
                     <h1 class="header-text">Ask us about anything</h1>
                     <p class="accent-text">All your questions answered</p>
@@ -75,18 +86,21 @@
                         </picture>
                     </div>
                     <p class="accent-text">New produce is added continuously as time<br> goes by and the seasons change.</p>
-                    <button class="primary-button">Go to chat</button>
+                    <a href="chatbot.html"><button class="primary-button">Go to chat</button></a>
                 </div>
             </div>
 
+            <!-- Section explaining how the service works -->
             <section class="how-it-works-section" aria-labelledby="HowItWorksTitle">
                 <div class="how-it-works-container">
+                    <!-- Title -->
                     <div class="steps step-1">
                         <h1 class="header-text step-main-title" id="howItWorksTitle">This is how it works</h1>
                     </div>
 
                     <div class="right-column">
 
+                        <!-- Step: Order groceries -->
                         <div class="steps step-2">
                             <div class="steps-wrapper step-title-area">
                                 <h2 class="sub-header-text step-title-small">Order groceries</h2>
@@ -97,7 +111,7 @@
                             </div>
                         </div>
                         
-
+                        <!-- Step: Stock up -->
                         <div class="steps step-3">
                             <div class="steps-wrapper step-title-area">
                                 <h2 class="sub-header-text step-title-small">Stock up</h2>
@@ -107,7 +121,7 @@
                             </div>
                         </div>
                         
-
+                        <!-- Step: Scan & order -->
                         <div class="steps step-4">
                             <div class="steps-wrapper step-title-area">
                                 <h2 class="sub-header-text step-title-small">Scan & reorder</h2>
@@ -117,7 +131,7 @@
                             </div>
                         </div>
                         
-
+                        <!-- Step: Swap & reduce -->
                         <div class="steps step-5">
                             <div class="steps-wrapper step-title-area">
                                 <h2 class="sub-header-text step-title-small">Swap & reuse</h2>
@@ -127,15 +141,18 @@
                             </div>
                         </div>
                         
-
                     </div>
                 </div>
             </section>
 
+            <!-- Section displaying popular produce items in a carousel -->
             <section class="popular-produce-section" aria-labelledby="PopularProduceTitle">
                 <h1 class="header-text" id="PopularProduceTitle">Popular produce</h1>
 
+                <!-- Produce cards for carousel -->
                 <div class="produce-carousel" role="region" aria-label="Popular produce items">
+                    
+                    <!-- Individual produce card: Oats -->
                     <div class="produce-card" role="group" aria-labelledby="OatsName">
                         <picture>
                             <source srcset="./assets/images//Product-Page/Oats-img.avif 1600w" sizes="100vw" type="image/avif">
@@ -150,6 +167,7 @@
                         <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                     </div>
 
+                    <!-- Individual produce card: Red Onions -->
                     <div class="produce-card" role="group" aria-labelledby="RedOnionsName">
                         <picture>
                             <source srcset="./assets/images//Product-Page/Red-onions-img.avif 1600w" sizes="100vw" type="image/avif">
@@ -164,6 +182,7 @@
                         <button class="add-to-cart-button">Add to basket <span class="arrow-icon" aria-hidden="true">↑</span></button>
                     </div>
 
+                    <!-- Individual produce card: Garlic -->
                     <div class="produce-card" role="group" aria-labelledby="GarlicName">
                         <picture>
                             <source srcset="./assets/images//Product-Page/Garlic-img.avif 1600w" sizes="100vw" type="image/avif">
@@ -187,6 +206,8 @@
                 <div class="footer-horizontal-line"></div>
                 <h2 class="footer-sub-header">Stay updated</h2>
                 <p class="footer-accent">Sign up for our newsletter to be the first<br>to know about new produce or other<br> exciting news!</p>
+                
+                <!-- Newsletter signup form -->
                 <form class="sign-up" aria-label="Newsletter signup form">
                     <label for="firstName" class="visually-hidden">First name</label>
                     <input type="text" id="firstName" placeholder="First name" autocomplete="given-name">
@@ -196,6 +217,7 @@
                 </form>
             </div>
         </footer>
+        <!-- Links to minified JavaScript file -->
         <script src="./js/script.min.js"></script>
     </body>
 </html>
