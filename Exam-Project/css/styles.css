@@ -446,8 +446,12 @@ input[type="button"]:focus-visible {
 
 .content-section h1.header-text {
     margin-bottom: 8px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 50px;
+}
+
+.accent-text.image-description {
+    margin-top: 45px;
+    ;
 }
 
 .content-section p.accent-text:nth-of-type(1) {
@@ -816,12 +820,14 @@ footer {
 }
 
 .newsletter-error-message {
-    color: var(--color-text-interface); 
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
+
     margin-top: 3px;
-    margin-bottom: 6px; 
+    margin-bottom: 6px;
     padding-left: 5px;
+
+    color: var(--color-text-interface);
 }
 
 .input-error {
@@ -1117,8 +1123,16 @@ footer {
 
 */
 
+.not-used {
+    width: 100%;
+}
+
 @media(min-width: 768px) {
     /* { Text } */
+
+    .not-used {
+        width: 200%;
+    }
 
     .body-text {
         font-size: 16px;
@@ -1192,25 +1206,24 @@ footer {
     /* Shop n' Ask section */
 
     .shop-and-ask-container {
+        position: relative;
+
         display: flex;
         overflow: hidden;
         align-items: flex-start;
         flex-direction: row;
         justify-content: center;
 
-        max-width: 1280px;
         margin: 0 auto;
         padding-top: 0;
         padding-bottom: 0;
-
-        gap: 200px;
     }
 
     .content-section {
         flex: 0 0 448px;
 
         box-sizing: border-box;
-        margin: 0;
+        margin: auto;
         padding: 98px 0;
 
         text-align: center;
@@ -1230,11 +1243,10 @@ footer {
         position: relative;
     }
 
-    .content-section.shop-section::after {
+    .shop-and-ask-container::before {
         position: absolute;
         z-index: 1;
         top: 0;
-        right: -100px;
 
         width: 1px;
         height: 100%;
@@ -1242,12 +1254,6 @@ footer {
         content: '';
 
         background-color: var(--color-text-interface);
-    }
-
-    .content-section.ask-section {
-        padding-left: 0;
-
-        border-left: none;
     }
 
     /* How it works section */

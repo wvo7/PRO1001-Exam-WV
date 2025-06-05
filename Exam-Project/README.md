@@ -25,7 +25,23 @@ This project is primarily intended for my teachers' assessment, but if anyone el
 
 ### Screenshots
 
-(will add later)
+#### Landing Page - Mobile
+![Landing Page - Mobile](/Exam-Project/assets/images/Screenshots/Landing-page-mobile.png)
+
+#### Landing Page - Desktop
+![Landing Page - Desktop](/Exam-Project/assets/images/Screenshots/Landing-page-desktop.png)
+
+#### Product Page - Mobile
+![Product Page - Mobile](/Exam-Project/assets/images/Screenshots/Product-page-mobile.png)
+
+#### Product Page - Desktop
+![Product Page - Desktop](/Exam-Project/assets/images/Screenshots/Product-page-desktop.png)
+
+#### Chatbot Page - Mobile
+![Chatbot Page - Mobile](/Exam-Project/assets/images/Screenshots/Chatbot-page-mobile.png)
+
+#### Chatbot Page - Desktop
+![Chatbot Page - Desktop](/Exam-Project/assets/images/Screenshots/Chatbot-page-desktop.png)
 
 ### Installation
 
